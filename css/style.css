@@ -1,0 +1,475 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "AdobeInvisFont";
+    src: url("../fonts/AdobeInvisFont.ttf");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../fonts/MyriadPro-Regular.ttf");
+    font-weight: lighter;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+
+#n-primary{
+    display: none;
+}
+
+#n-secondary{
+    display: block;
+    text-align: right;
+}
+
+.hamburger {
+    background: none;
+    /*position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 45px;
+    padding: 5px 15px 0px 15px;*/
+    color: #999;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+#search-burguer form input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-size: 10px;
+    color: rgba(2, 2, 2, 255);
+    background-color: white;
+    background-image: url('../assets/search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    margin: 4px;
+    padding: 12px 20px 12px 40px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    outline: none !important;
+}
+
+#search-burguer{
+    display: inline-block;
+}
+
+.menu {
+    z-index: 1000000;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 100%;
+    background: #f1f1f1;
+    position: absolute;
+    text-align: left;
+    font-size: 12px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu li {
+    display: block;
+    padding: 15px 0 15px 15px;
+    border-bottom: #dddddd 1px solid;
+}
+
+.menu li:hover {
+    display: block;
+    background-color: #ccc;
+    padding: 15px 0 15px 15px;
+    border-bottom: #dddddd 1px solid;
+}
+
+.menu a {
+    margin: 10px 0px 0px 0px;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    color: rgba(113, 164, 213, 255);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+
+.slideshow-banners {
+    position: relative;
+    margin: auto;
+}
+
+.banner {
+    display: none;
+    position: relative;
+}
+
+.dots {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+}
+
+.dot:hover {
+    /*background-color: black;*/
+}
+
+.active {
+    background-color: transparent;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+ul {
+    padding: 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.layer {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.layer:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+#content {
+    text-align: center;
+}
+
+#content #n-primary li {
+    display: inline-block;
+    text-align: left;
+}
+
+#content li a {
+    display: inline-block;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-size: 14px;
+    color: rgba(2, 2, 2, 255);
+    text-decoration: none;
+    margin: 13px;
+}
+
+#content li a.current {
+    color: rgba(113, 164, 213, 255);
+}
+
+#search form input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-size: 10px;
+    color: rgba(2, 2, 2, 255);
+    background-color: white;
+    background-image: url('../assets/search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    margin: 4px;
+    padding: 12px 20px 12px 40px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    outline: none !important;
+    /*width: auto;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-size: 14px;
+    color: rgba(2, 2, 2, 255);
+    background-color: white;
+    background-image: url('../assets/search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    margin: 13px;
+    padding: 12px 20px 12px 40px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    outline: none !important;*/
+}
+
+.banner-title h4 {
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    margin: 0px;
+    color: white;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.banner-title h1 {
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    margin: 0px;
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+}
+
+.banner-title {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+/*.slideshow-banners {
+    position: relative;
+}*/
+
+.section {
+    text-align: center;
+}
+
+.shadow{
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    border-radius: 25px;
+}
+
+.section-container {
+    width: 70%;
+    margin: 0 auto 30px auto;
+}
+
+.section ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.section li {
+    display: table-cell;
+    text-align: center;
+    border-bottom: none;
+    border-top: none;
+    vertical-align: top;
+}
+
+.section #three-columns li {
+    border-left: solid 30px white;
+    border-right: solid 30px white;
+}
+
+.section ul li img,
+.section ul li h3,
+.section ul li h6,
+.section ul li p,
+.section ul li a {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.shadow p{
+    margin: 12px 12px;
+}
+
+.section ul li p,
+.section ul li a {
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-weight: lighter;
+    font-size: 75%;
+    text-decoration: none;
+}
+
+.section ul li a:visited {
+    color: rgba(113, 164, 213, 255);
+}
+
+.section ul li a:hover {
+    color: rgba(113, 164, 213, 255);
+    text-decoration: underline;
+}
+
+.section-title h2 {
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-weight: lighter;
+    font-size: 32px;
+    color: rgba(2, 2, 2, 255);
+}
+
+.section ul li h6 {
+    margin: 0;
+    color: gray;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-weight: lighter;
+    font-size: 60%;
+}
+
+.section ul li h3 {
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-weight: bold;
+}
+
+#three-columns,
+#one-column {
+    display: none;
+}
+
+footer {
+    background: #000;
+    color: #FFFFFF;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#copyright {
+    margin-bottom: 0;
+    font-family: "OpenSans", "AdobeInvisFont", "MyriadPro-Regular";
+    font-weight: lighter;
+    font-size: 50%;
+    float: left;
+}
+
+#logo {
+    float: right;
+    max-height: 26px;
+    width: auto;
+    height: auto;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* If the screen size is 831px wide or more */
+
+@media screen and (min-width: 831px) {
+    .banner-title h1 {
+        font-size: 36px;
+    }
+    .banner-title h4 {
+        font-size: 24px;
+    }
+    #one-column {
+        display: none;
+    }
+    #three-columns {
+        display: block;
+    }
+    .section li {
+        display: table-cell;
+    }
+    #n-secondary{
+        display: none;
+    }
+    #n-primary{
+        display: block;
+    }
+}
+
+/* If the screen size is 830px wide or less */
+
+@media screen and (max-width: 830px) {
+    .banner-title h1 {
+        font-size: 26px;
+    }
+    .banner-title h4 {
+        font-size: 14px;
+    }
+    #three-columns {
+        display: none;
+    }
+    #one-column {
+        display: block;
+    }
+    .section li {
+        display: block;
+    }
+    #n-secondary{
+        display: block;
+    }
+    #n-primary{
+        display: none;
+    }
+}

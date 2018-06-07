@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> web dev challenge </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="n-primary">
+            <li><a class="current" href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Campaigns</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">People</a></li>
+            <li id="search">
+                <form>
+                    <input type="text" name="search" placeholder="Search everywhere">
+                </form>
+            </li>
+        </div>
+        <div id="n-secondary">
+            <li id="search-burguer">
+                <form>
+                    <input type="text" name="search" placeholder="Search everywhere">
+                </form>
+            </li>
+            <button class="hamburger">&#9776;</button>
+            <div class="menu">
+                <ul>
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>Dashboard</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Campaigns</li>
+                    </a>
+                    <a href="#">
+                        <li>Files</li>
+                    </a>
+                    <a href="#">
+                        <li>Departments</li>
+                    </a>
+                    <a href="#">
+                        <li>People</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="slideshow-banners">
+        <li class="banner fade">
+            <div class="layer">
+                <img src="assets/banner1.png">
+            </div>
+            <div class="banner-title">
+                <h1>Welcome to the Community</h1>
+                <h4>Share, connect and collaborate.</h4>
+            </div>
+        </li>
+        <li class="banner fade">
+            <div class="layer">
+                <img src="assets/banner2.jpg">
+            </div>
+            <div class="banner-title">
+                <h1>Welcome to the Second Banner</h1>
+                <h4>Here is my subtitle.</h4>
+            </div>
+        </li>
+        <li class="banner fade">
+            <div class="layer">
+                <img src="assets/banner3.jpg">
+            </div>
+            <div class="banner-title">
+                <h1>Welcome to the Third Banner</h1>
+                <h4>I have subtitle too.</h4>
+            </div>
+        </li>
+
+        <ul class="dots" style="text-align:center">
+            <span class="dot" onclick="currentBanner(1)"></span>
+            <span class="dot" onclick="currentBanner(2)"></span>
+            <span class="dot" onclick="currentBanner(3)"></span>
+        </ul>
+    </ul>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Stories from Us</h2>
+        </div>
+
+        <div class="section-container" id="three-columns">
+            <!-- First row-->
+            <ul>
+                <li>
+                    <h6>May 20,2015</h6>
+                </li>
+                <li>
+                    <h6>July 18, 2015</h6>
+                </li>
+                <li>
+                    <h6>August 26, 2015</h6>
+                </li>
+            </ul>
+            <!-- Second row-->
+            <ul>
+                <li>
+                    <h3>Corporate Announcement</h3>
+                </li>
+                <li>
+                    <h3>New Office Location</h3>
+                </li>
+                <li>
+                    <h3>Connect with coworkers</h3>
+                </li>
+            </ul>
+            <!-- Third row-->
+            <ul>
+                <li>
+                    <img src="assets/image1.png" />
+                </li>
+                <li>
+                    <img src="assets/image2.png" />
+                </li>
+                <li>
+                    <img src="assets/image3.png" />
+                </li>
+            </ul>
+            <!-- Fourth row-->
+            <ul>
+                <li>
+                    <p>We want to ensure you are comfortable with our new and awesome platform. Since we have launched our new community we have been receiving excellent feedback, but we would like to personally hear from you.</p>
+                </li>
+                <li>
+                    <p>We have officially moved into our new office location! It has been a long time coming but we have survived and now we are settling in.</p>
+                </li>
+                <li>
+                    <p>We are looking into using this new platform to further assist you in connecting with your coworkers. We are hoping this tool will rock!</p>
+                </li>
+            </ul>
+            <!-- Fifth row-->
+            <ul>
+                <li>
+                    <a href="#">Read More</a>
+                </li>
+                <li>
+                    <a href="#">Read More</a>
+                </li>
+                <li>
+                    <a href="#">Read More</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Responsive view on 1 Column -->
+        <div class="section-container" id="one-column">
+            <!-- First row-->
+            <div class="shadow">
+                <ul>
+                    <li>
+                        <h6>May 20,2015</h6>
+                    </li>
+                    <li>
+                        <h3> Corporate Announcement</h3>
+                    </li>
+                    <li>
+                        <img src="assets/image1.png" />
+                    </li>
+                    <li>
+                        <p>We want to ensure you are comfortable with our new and awesome platform. Since we have launched our new community we have been receiving excellent feedback, but we would like to personally hear from you.</p>
+                    </li>
+                    <li>
+                        <a href="#">Read More</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Second row-->
+            <div class="shadow">
+                <ul>
+                    <li>
+                        <h6>July 18, 2015</h6>
+                    </li>
+                    <li>
+                        <h3>New Office Location</h3>
+                    </li>
+                    <li>
+                        <img src="assets/image2.png" />
+                    </li>
+                    <li>
+                        <p>We have officially moved into our new office location! It has been a long time coming but we have survived and now we are settling in.</p>
+                    </li>
+                    <li>
+                        <a href="#">Read More</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Third row-->
+            <div class="shadow">
+                <ul>
+                    <li>
+                        <h6>August 26, 2015</h6>
+                    </li>
+                    <li>
+                        <h3>Connect with coworkers</h3>
+                    </li>
+
+                    <li>
+                        <img src="assets/image3.png" />
+                    </li>
+                    <li>
+                        <p>We are looking into using this new platform to further assist you in connecting with your coworkers. We are hoping this tool will rock!</p>
+                    </li>
+                    <li>
+                        <a href="#">Read More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <p id="copyright">&copy; 2016</p>
+            <img id="logo" src="assets/igloo.png" />
+        </div>
+    </div>
+</footer>
+<html>
